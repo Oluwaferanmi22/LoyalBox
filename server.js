@@ -15,6 +15,9 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/rewards', require('./routes/rewardRoutes'));
 app.use('/api/users', require('./routes/userRoutes'));
+app.get('/', (req, res) => {
+  res.send('welcome to loyalBox Api')
+})
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
