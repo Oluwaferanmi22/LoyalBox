@@ -13,8 +13,8 @@ app.use(express.json());
 
 
 app.use('/auth', authRoutes);
-app.use('/rewards', rewardRoutes);
-app.use('/users', userRoutes);
+app.use('/reward', rewardRoutes);
+app.use('/user', userRoutes);
 
 app.get('/', (req, res) => {
   res.send('LoyalBox API is running...');
